@@ -45,6 +45,7 @@ func TestFileMgr(t *testing.T) {
 
 		// Read data back
 		p2 := NewPage(blockSize)
+    fm.Read(blk, pgmgr, pId)
 		err = fm.Read(blk, p2)
 		if err != nil {
 			t.Fatalf("Failed to read block: %v", err)
